@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- นายเจษฎา ศรีพัฒนาจริยกุล -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        .jumbotron{
+            position: relative;
+            overflow: hidden;
+        }
+        video{
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container {
+            z-index: 2;
+            position: relative;
+
+        }
+    </style>
+    <title>23-js-bootstrap-from.html</title>
+</head>
+<body style="background-color: #9CF4DB    ;"> 
+    <div class="jumbotron jumbotron-fluid mb-0 text-light">
+        <video src="https://vod-progressive.akamaized.net/exp=1653466869~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2851%2F11%2F289258217%2F1094756917.mp4~hmac=c7f7542be67462783f7b11ef1e856e0cbfaa224282935382dcb2f613301fcf74/vimeo-prod-skyfire-std-us/01/2851/11/289258217/1094756917.mp4?filename=Pexels+Videos+1409899.mp4" autoplay loop muted></video>
+        <div class="container">
+          <h1 class="display-4">Jetsada Siphatthanajariyakul</h1>
+          <p class="lead">information technology</p>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #46EEA6   ;">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      
+      <div class="container mt-4">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card  mb-2" style="width: 20rem;height: 30rem;">
+                    <div class="alert alert-primary" role="alert">
+                        บันทึกข้อมูลนักเรียน
+                      </div>
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <!-- <h5 class="card-title">Card title</h5> -->
+                      <p class="card-text">
+                        <form>
+                            <div class="form-group">
+                              <label for="formGroupSID">รหัส</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                            </div>
+                            <div class="form-group">
+                              <label for="formGroupName">ชื่อ-สกุล</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupPhone">เบอร์โทรศัพท์</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="">
+                              </div>
+                          </form>
+                          <button type="button" class="btn btn-outline-success w-25" onclick="show() ;show1() ;show2()" >บันทึก</button>
+                      </p>
+
+                       <!-- <a href="#" class="btn btn-primary">Go somewhere</a>  -->
+                    </div>
+                  </div>
+                  
+
+            </div>
+            
+            <div class="col-sm-6">
+                <div class="card " style="width: 20rem; height: 30rem;">
+                    <div class="alert alert-primary" role="alert">
+                        แสดงข้อมูลนักเรียน
+                      </div>
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <!-- <h5 class="card-title">Card title</h5> -->
+                      <p class="card-text" >
+                        <br>
+                       
+                        <div type="text" class="alert alert-success" role="alert"  id="AID">
+                             <script>
+                               let i = "รหัส : "
+                               let fname = "ชื่อ - สกุล : "
+                               let phoneN = "เบอร์โทรศัพท์ : "
+                          function show(){
+                            document.getElementById('AID').innerHTML = 
+                            i+
+                            document.getElementById('formGroupExampleInput').value
+                          }
+                        </script>
+                        </div>
+                        <br>
+                        <br>
+                        <div type="text" class="alert alert-primary" role="alert" id="AName">
+                          <script>
+                            function show1(){
+                              document.getElementById('AName').innerHTML =
+                              fname +
+                              document.getElementById('formGroupExampleInput2').value
+                            }
+                          </script>
+                        </div>
+                        <br>
+                        <br>
+                        <div type="text" class="alert alert-warning" role="alert" id="APhone">
+                          <script>
+                            function show2(){
+                              document.getElementById('APhone').innerHTML =
+                              phoneN +
+                              document.getElementById('formGroupExampleInput3').value
+                            }
+                          </script>
+                        </div>
+                        </p>
+                      
+
+                       <!-- <a href="#" class="btn btn-primary">Go somewhere</a>  -->
+                    </div>
+                  </div>
+                  
+
+            </div>
+            
+            
+        </div>
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js
+" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js
+" 
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
